@@ -1,0 +1,81 @@
+.ibm-sitenav-menu-container-new {
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 815;}
+.ibm-sitenav-menu-list.ibm-download-link {
+	display: block;}
+.allocation-filter-area {
+	padding: 10px 0;}
+.ibm-sitenav-menu-container-new .ibm-download-link {
+	position: relative;
+	width: 25px;
+	height: 50px;
+	cursor: pointer;
+	vertical-align: top;}
+.allocation-filter-area p {
+	padding: 0 10px 0 0;}
+.allocation-filter-area .ibm-dropdown-link {
+	display: inline-block;
+	background-color: #fff;
+	position: relative;
+	z-index: 1;}
+.allocation-filter-area .ibm-dropdown-link:after,
+.allocation-filter-area .ibm-dropdown-link:before {
+	right: 8px;
+	left: auto;
+	content: "";
+	width: 0;
+	height: 0;}
+.allocation-filter-area .ibm-dropdown-link:after {	
+	top: 10px;	
+	z-index: 2;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #fff;
+	position: absolute;}
+.allocation-filter-area .ibm-dropdown-link:before {	
+	top: 12px;	
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #444;
+	z-index: 1;}
+.ibm-sitenav-menu-container-new select {
+	background: none;
+	border:1px solid #959f9f;
+	padding: 3px 27px 3px 3px;
+	color: #444;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+	position: relative;
+	cursor: pointer;
+	font-size: 0.875rem;
+	z-index: 3;}
+/*.ibm-sitenav-menu-container-new #mySelect2 option {
+	border-right:1px solid #959f9f;}*/
+.ibm-sitenav-menu-container-new select::-ms-expand {
+    display: none;}
+@media screen and (max-width: 610px) {
+    .ibm-sitenav-menu-container-new {
+    	height: auto;}
+    .allocation-filter-area {
+	    display: inline-block;
+		width: 90%;
+		padding: 5px 0;}
+    .allocation-filter-area p {
+		padding: 5px 0;
+		float: none !important;}
+	.allocation-filter-area p span {
+		display: block;}
+	.ibm-sitenav-menu-container-new select {
+		width: 100%;}
+}
+@media screen and (max-width: 350px) {
+    .allocation-filter-area {
+		width: 85%;}
+}

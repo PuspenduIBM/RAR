@@ -1,0 +1,32 @@
+<div class="ibm-sitenav-menu-container-new ibm-background-neutral-white-30">
+    <div class="ibm-sitenav-menu-list ibm-download-link"></div>
+    <div class="allocation-filter-area">
+        <p class="ibm-form-elem-grp ibm-fleft">
+            <span class="ibm-dropdown-link">
+                <select class="ultraSelect cos-select" id="mySelect1" name="myOptions1[]" *ngIf="reports.years.length > 0" (change)="onChange($event.target.value)">
+                    <option value="defaultQuarterVal" selected>Select Quarter</option>                    
+                    <option *ngFor="let quarterlist of reports.years" value="{{quarterlist.name}}">{{quarterlist.name}}</option>
+                </select>
+            </span>
+        </p>
+        <p class="ibm-form-elem-grp ibm-fleft" *ngIf="specific_quarter && specific_quarter != 'defaultQuarterVal'">
+            <span class="ibm-dropdown-link">
+                <select class="ultraSelect cos-select" id="mySelect2" name="myOptions2[]" *ngIf="reports.months.length > 0;" (change)="onChangeMonth($event.target.value)">                     
+                    <option value="all" selected>All</option>
+                    <ng-container *ngFor="let monthlist of reports.months"><option *ngIf="monthlist.quartername == specific_quarter" value="{{monthlist.shortcode}}">{{monthlist.name}}</option></ng-container>
+                </select>
+            </span>
+        </p>
+        <!-- <p class="ibm-form-elem-grp ibm-fleft">
+            <span class="ibm-dropdown-link">
+                <select class="ultraSelect cos-select" id="mySelect3" name="myOptions3[]">
+                    <option value="" selected>Select Specialization</option>
+                    <option value="A">Technical Editor</option>
+                    <option value="B">Java / J2EE Application Developer</option>
+                    <option value="C">Technical Lead</option>
+                    <option value="C">Video Editor</option>
+                </select>
+            </span>
+        </p> -->
+    </div>
+</div>

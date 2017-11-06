@@ -1,0 +1,33 @@
+.ibm-sitenav-menu-container-new {
+    background-color: #fff;    
+    height: 50px;
+    line-height: 50px;
+    margin: 0 20px;
+    position: relative;
+    z-index: 815;}
+.ibm-sitenav-menu-list .ibm-h5 a {
+	display: inline-block;
+	cursor: default;
+	margin: 0 5px;
+    outline: none;}
+.ibm-sitenav-menu-list .ibm-h5 a:not(.active) {	
+	cursor: pointer;}
+.ibm-sitenav-menu-list .ibm-h5 a.active {
+    color: #3b6caa;}
+.ibm-sitenav-menu-list .ibm-h5 a:not(.active):hover {
+	text-decoration: underline;}
+.ibm-sitenav-menu-list .ibm-h5 {
+    font-size: 1rem;
+    line-height: 1.925rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;}
+@media screen and (max-width: 1024px) {
+	.ibm-sitenav-menu-container-new {
+		height: 100px;
+        overflow: hidden;}
+	.ibm-sitenav-menu-list {
+		float: none;
+		display: block;}
+}

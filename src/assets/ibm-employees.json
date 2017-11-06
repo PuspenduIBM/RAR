@@ -1,0 +1,584 @@
+{
+  "offerings":[
+        {
+            "title":"APIs",
+            "Project Manager":[
+            ],
+            "Java / J2EE Application Developer":[
+                {
+                    "manager":"Dasaraju, Anila",
+                    "email":"ritsarka@in.ibm.com",
+                    "name":"Sarkar, Ritam"
+                },
+                {
+                    "manager":"Joshi, Guruprasad K",
+                    "email":"karthickrao@in.ibm.com",
+                    "name":"Rao, Karthick A"
+                },
+                {
+                    "manager":"Rayudu, Anand R",
+                    "email":"aiaithas@in.ibm.com",
+                    "name":"Aitha, Saikumar"
+                }
+            ]
+        },
+        {
+            "title":"Marketing Content",
+            "Creative Design":[
+            ],
+            "SSI":[
+            ],
+            "Content Central":[
+            ],
+            "Events & Brand Communications":[
+            ],
+            "Operations":[
+            ],
+            "Application Architect":[
+                {
+                    "manager":"Dasaraju, Anila",
+                    "email":"himanshu.suhane@in.ibm.com",
+                    "name":"SUHANE, HIMANSHU"
+                }
+            ],
+            "Project Management":[
+            ],
+            "Client References":[
+            ],
+            "Wordpress":[
+            ],
+            "Social Media":[
+            ],
+            "Partner World Web/portal development, Maintainance":[
+            ],
+            "Project Manager - Collaterals":[
+            ],
+            "Internal Communications":[
+            ],
+            "Marketing":[
+            ],
+            "Marketing Writer":[
+            ],
+            "Analyst Relations Support":[
+            ],
+            "Marketing & Communication Writer":[
+            ],
+            "Content Project Manager":[
+            ],
+            "SSW":[
+            ],
+            "Solution Gateway":[
+            ]
+        },
+        {
+            "title":"Applications",
+            "BI Developer":[
+                {
+                    "manager":"Kumar, Anita",
+                    "email":"nagend10@in.ibm.com",
+                    "name":"1, Nagendra *CONTRACTOR*"
+                }
+            ],
+            "Project Manager":[
+            ],
+            "Business Development Lead":[
+            ],
+            "Operations":[
+            ],
+            "Administrative Staff Professional":[
+            ],
+            "Portal Developer":[
+            ],
+            "Application Architect":[
+                {
+                    "manager":"Dasaraju, Anila",
+                    "email":"himanshu.suhane@in.ibm.com",
+                    "name":"SUHANE, HIMANSHU"
+                }
+            ],
+            "Business Analyst":[
+            ],
+            "QA Analyst":[
+            ],
+            "Account Manager":[
+            ],
+            "Information Architect":[
+            ],
+            "Mobile Application Developer":[
+            ],
+            "ETL Developer":[
+            ],
+            "Applications Database Administrator":[
+            ],
+            "Server Support Specialist":[
+            ],
+            "JavaScript Developer":[
+            ],
+            "Senior QA Analyst":[
+            ],
+            "Java / J2EE Application Developer":[
+                {
+                    "manager":"Dasaraju, Anila",
+                    "email":"ritsarka@in.ibm.com",
+                    "name":"Sarkar, Ritam"
+                },
+                {
+                    "manager":"Joshi, Guruprasad K",
+                    "email":"karthickrao@in.ibm.com",
+                    "name":"Rao, Karthick A"
+                },
+                {
+                    "manager":"Rayudu, Anand R",
+                    "email":"aiaithas@in.ibm.com",
+                    "name":"Aitha, Saikumar"
+                }
+            ],
+            "System Database Administrator":[
+            ],
+            "WSE-Server Support Specialist":[
+            ],
+            "DB Developer":[
+            ]
+        },
+        {
+            "title":"Social",
+            "Social Media":[
+            ]
+        },
+        {
+            "title":"Video",
+            "Video Editor":[
+            ],
+            "Video":[
+            ]
+        },
+        {
+            "title":"Optimization",
+            "Project Manager":[
+            ],
+            "ETL Developer":[
+            ],
+            "BI Developer":[
+                {
+                    "manager":"Kumar, Anita",
+                    "email":"nagend10@in.ibm.com",
+                    "name":"1, Nagendra *CONTRACTOR*"
+                }
+            ],
+            "Business Analyst":[
+            ],
+            "DB Developer":[
+            ]
+        },
+        {
+            "title":"Design",
+            "Project Manager":[
+            ],
+            "Creative Design":[
+            ],
+            "E-Learning":[
+            ],
+            "User Experience Architect":[
+            ],
+            "Video Editor":[
+            ],
+            "Account Manager":[
+            ],
+            "Art Director":[
+            ]
+        }    
+  ],
+  "years":[
+    {
+        "name":"Quarter 1"
+    },
+    {
+        "name":"Quarter 2"
+    },
+    {
+        "name":"Quarter 3"
+    },
+    {
+        "name":"Quarter 4"
+    }
+  ],
+  "months":[
+    {
+      "name":"January",
+      "shortcode":"Jan",
+      "quartername":"Quarter 1"
+    },
+    {
+      "name":"February",
+      "shortcode":"Feb",
+      "quartername":"Quarter 1"
+    },
+    {
+      "name":"March",
+      "shortcode":"Mar",
+      "quartername":"Quarter 1"
+    },
+    {
+      "name":"April",
+      "shortcode":"Apr",
+      "quartername":"Quarter 2"
+    },
+    {
+      "name":"May",
+      "shortcode":"May",
+      "quartername":"Quarter 2"
+    },
+    {
+      "name":"June",
+      "shortcode":"Jun",
+      "quartername":"Quarter 2"
+    },
+    {
+      "name":"July",
+      "shortcode":"Jul",
+      "quartername":"Quarter 3"
+    },
+    {
+      "name":"August",
+      "shortcode":"Aug",
+      "quartername":"Quarter 3"
+    },
+    {
+      "name":"September",
+      "shortcode":"Sep",
+      "quartername":"Quarter 3"
+    },
+    {
+      "name":"October",
+      "shortcode":"Oct",
+      "quartername":"Quarter 4"
+    },
+    {
+      "name":"November",
+      "shortcode":"Nov",
+      "quartername":"Quarter 4"
+    },
+    {
+      "name":"December",
+      "shortcode":"Dec",
+      "quartername":"Quarter 4"
+    }
+  ],
+  "managers":[
+    {
+        "email":"anandrayudu@in.ibm.com",
+        "name":"Anand R Rayudu"
+    },
+    {
+        "email":"anilachamarthi@in.ibm.com",
+        "name":"Anila Dasaraju"
+    },
+    {
+        "email":"anita.kumar@in.ibm.com",
+        "name":"Anita Kumar"
+    },
+    {
+        "email":"gurjoshi@in.ibm.com",
+        "name":"Guruprasad K Joshi"
+    },
+    {
+        "email":"Satish.VN@in.ibm.com",
+        "name":"Satish Venkatanarayana"
+    },
+    {
+        "email":"chaitanyareddy@in.ibm.com",
+        "name":"Venkata Krishna C (VENKATA Krishna) Janga",
+        "isParent":"yes"
+    }
+  ],
+  "employees":[
+    {
+      "id": 1,
+      "name": "Puspendu Mondal",
+      "email": "pusmonda@in.ibm.com",
+      "managerName": "Venkata Krishna C (VENKATA Krishna) Janga",
+      "role": "UI Developer",
+      "project": {
+        "name": "Resources Availability Report",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Web"
+    },
+    {
+      "id": 2,
+      "name": "Karthick Rao",
+      "email": "karthickrao@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Java Developer",
+      "project": {
+        "name": "Bluemine",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    },
+    {
+      "id": 3,
+      "name": "Rajaneesh",
+      "email": "rajaneesh@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Application Developer",
+      "project": {
+        "name": "DSG GATEWAY",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    },
+    {
+      "id": 1,
+      "name": "Puspendu Mondal",
+      "email": "pusmonda@in.ibm.com",
+      "managerName": "Anand R Rayudu",
+      "role": "UI Developer",
+      "project": {
+        "name": "Resources Availability Report",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Web"
+    },
+    {
+      "id": 2,
+      "name": "Karthick Rao",
+      "email": "karthickrao@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Java Developer",
+      "project": {
+        "name": "Bluemine",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    },
+    {
+      "id": 3,
+      "name": "Rajaneesh",
+      "email": "rajaneesh@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Application Developer",
+      "project": {
+        "name": "DSG GATEWAY",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    },
+    {
+      "id": 1,
+      "name": "Puspendu Mondal",
+      "email": "pusmonda@in.ibm.com",
+      "managerName": "Anand R Rayudu",
+      "role": "UI Developer",
+      "project": {
+        "name": "Resources Availability Report",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Web"
+    },
+    {
+      "id": 2,
+      "name": "Karthick Rao",
+      "email": "karthickrao@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Java Developer",
+      "project": {
+        "name": "Bluemine",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    },
+    {
+      "id": 3,
+      "name": "Rajaneesh",
+      "email": "rajaneesh@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Application Developer",
+      "project": {
+        "name": "DSG GATEWAY",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    },
+    {
+      "id": 1,
+      "name": "Puspendu Mondal",
+      "email": "pusmonda@in.ibm.com",
+      "managerName": "Anand R Rayudu",
+      "role": "UI Developer",
+      "project": {
+        "name": "Resources Availability Report",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Web"
+    },
+    {
+      "id": 2,
+      "name": "Karthick Rao",
+      "email": "karthickrao@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Java Developer",
+      "project": {
+        "name": "Bluemine",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    },
+    {
+      "id": 3,
+      "name": "Rajaneesh",
+      "email": "rajaneesh@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Application Developer",
+      "project": {
+        "name": "DSG GATEWAY",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    },
+    {
+      "id": 1,
+      "name": "Puspendu Mondal",
+      "email": "pusmonda@in.ibm.com",
+      "managerName": "Anand R Rayudu",
+      "role": "UI Developer",
+      "project": {
+        "name": "Resources Availability Report",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Web"
+    },
+    {
+      "id": 2,
+      "name": "Karthick Rao",
+      "email": "karthickrao@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Java Developer",
+      "project": {
+        "name": "Bluemine",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    },
+    {
+      "id": 3,
+      "name": "Rajaneesh",
+      "email": "rajaneesh@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Application Developer",
+      "project": {
+        "name": "DSG GATEWAY",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    },
+    {
+      "id": 1,
+      "name": "Puspendu Mondal",
+      "email": "pusmonda@in.ibm.com",
+      "managerName": "Anand R Rayudu",
+      "role": "UI Developer",
+      "project": {
+        "name": "Resources Availability Report",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Web"
+    },
+    {
+      "id": 2,
+      "name": "Karthick Rao",
+      "email": "karthickrao@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Java Developer",
+      "project": {
+        "name": "Bluemine",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    },
+    {
+      "id": 3,
+      "name": "Rajaneesh",
+      "email": "rajaneesh@in.ibm.com",
+      "managerName": "Guruprasad K Joshi",
+      "role": "Application Developer",
+      "project": {
+        "name": "DSG GATEWAY",
+        "status": "Active",      
+        "startDate": "11/05/2017",
+        "endDate": "12/05/2017",
+        "allocation": "60%",
+        "available": "40%"
+      },
+      "specialization": "Application"
+    }
+  ]
+}

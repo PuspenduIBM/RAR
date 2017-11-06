@@ -1,0 +1,413 @@
+.allocation-container .ibm-data-table tbody,
+.allocation-container .ibm-data-table thead { display: block; width: 100%; position: relative; z-index: 2; }
+.allocation-container .ibm-data-table tbody {
+    max-height:calc(100vh - 424px);
+    min-height:132px;
+    overflow: auto;
+	padding:18px 0 0 0;
+	z-index: 1;}
+.allocation-container .ibm-data-table thead tr {
+	width: calc(100vw - 17px);
+	/*width: 100%;*/
+	display: table;}
+.allocation-container .ibm-data-table tbody tr {
+	width: 100%;
+	display: table;}
+.allocation-container .ibm-data-table tr td, .allocation-container .ibm-data-table tr th {
+	display: table-cell;
+	width: 20vw;
+	text-align: left;
+	padding: 10px 20px;}
+.allocation-container .ibm-data-table tr td:nth-child(3), .allocation-container .ibm-data-table tr th:nth-child(3) {
+	width: 30vw;
+	padding: 0;
+	position: relative;}
+.allocation-container .ibm-data-table tr td:nth-child(4), .allocation-container .ibm-data-table tr th:nth-child(4) {
+	width: auto;}
+.allocation-container .ibm-data-table tr th {
+	text-transform: uppercase;}
+.allocation-container .ibm-data-table thead tr {
+	border: none;}
+.allocation-container .ibm-data-table thead {
+	border-bottom:1px solid #5a5a5a;}
+.allocation-container .ibm-data-table tr th {
+	position: relative;}
+.allocation-container .ibm-data-table .quarterHeading, .allocation-container .ibm-data-table .selectedMonthHeading {
+	position: absolute;
+	left: 0;
+	right:0;
+	bottom:-19px;
+	height: 19px;}
+.allocation-container .ibm-data-table .quarterHeading > div, .allocation-container .ibm-data-table .selectedMonthHeading > div {
+	border-top:2px solid #d9dbdd;
+	background-color: #ffffff;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 17px;
+	font-size: 12px;	
+	float: left;}
+.allocation-container .ibm-data-table .quarterHeading > div:nth-child(2n) {
+	border-top: 2px solid #979da2;}
+.allocation-container .ibm-data-table .quarterHeading > div:hover, .allocation-container .ibm-data-table thead.active .quarterHeading > .activeHeading,
+.allocation-container .ibm-data-table .selectedMonthHeading > div:hover, .allocation-container .ibm-data-table thead.active .selectedMonthHeading > .activeHeading {
+	border-color: #83c4ff;
+	background-color: #555555;
+	color: #ffffff;}
+.allocation-container .ibm-data-table tbody tr + tr {
+	border:none;}
+.allocation-container .ibm-data-table.ibm-altrows tbody tr:nth-child(2n) {
+	background-color: #f9f9f9;}
+.allocation-container .ibm-data-table:not(.ibm-no-highlight) tbody tr:hover {
+	background-color: rgba(90, 170, 250, 0.2);}
+tbody .activeListing {
+	background-color: rgba(90, 170, 250, 0.075);}
+.quarterListing, .selectedMonth {
+	bottom: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+	z-index: 1;}
+.allocation-container .ibm-data-table .quarterHeading > div, .quarterListing > div {
+	width: 30%;}
+.quarterListing > div {
+	float: left;
+	height: 100%;
+    min-height: 44px;}
+.allocation-container .ibm-data-table .selectedMonthHeading > div, .selectedMonth > div {
+	width: 90%;}
+.popupBarOuter .selectedMonth > div {
+	width: 100%;}
+.selectedMonth > div {
+	float: left;
+	height: 100%;}
+.quarterListing > div:hover, .selectedMonth > div:hover {
+	background-color: #ffffff;
+	cursor: pointer;}
+.percentageArea {
+	position: relative;
+	font-size: 0.675rem;
+	padding: 0;
+	margin: 5px 0 0 0;
+	line-height: 1.25rem;}
+.barOuter {
+	height: 8px;
+	border: 1px solid #d9dbdd;
+	background-color: #ffffff;}
+.month1 .barOuter{	
+	border-right: none;}
+.month2 .barOuter{
+	border-left: none;
+	border-right: none;}
+.month3 .barOuter{
+	border-left: none;}
+.monthInner1, .monthInner2, .monthInner3 {
+	display: none;}
+.availabilityBar {
+	float: left;
+	height: 8px;}
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{ 
+    .availabilityBar {
+    	height: 7.5px;}
+}
+.availableBar {
+	background-color: #ffffff;}
+.stretchBar {
+	background-color: #22abfa;}
+.partialStretchBar {
+	background-color: #22abfa;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.5) 6px);}
+.notAvailableBar {
+	background-color: #979DA2;}
+.overAllocatedBar {
+	background-color: #ff0000;}
+.partialAvailableBar {
+	background-color: #979DA2;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.5) 6px);}
+.detailsPopup {
+	background-color: #ffffff;
+	z-index: 1002;
+	position: fixed;
+	left: 15vw;
+	top: 15vh;
+	right: 15vw;
+	bottom: 15vh;
+	display: none;
+	padding:25px;
+	box-shadow: 0 0 20px 5px rgba(0,0,0,0.2);}
+.popupBack {
+	position: fixed;
+	z-index: 1001;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	display: none;
+	cursor: pointer;}
+.closePopup {
+	position: absolute;
+	background-color: #fff;
+	right: -10px;
+	top: -10px;	
+	width: 26px;
+	height: 27px;
+	color: #777677;
+	cursor: pointer;
+	border:5px solid #fff;
+	box-shadow: 4px -4px 5px 1px rgba(0,0,0,0.1);
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;}
+.closePopup:hover {
+	color: #000;
+	box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+	transform: scale(1.1);}
+.closePopup:active {
+	color: #000;
+	box-shadow: 4px -4px 5px 1px rgba(0,0,0,0.1);
+	transform: scale(1);
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;}
+.closePopup:before {
+	content: "\f119";
+	left: 1px;
+	/*font-family: "icons-ibm-v11";	
+    font-size: 1.6em;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    width: 27px;
+	height: 27px;
+	position: absolute;*/}
+.activePopup, .activePopupBack {
+	display: block !important;}
+.activePopup {
+	animation-name:popup_animate;
+	-o-animation-name:popup_animate;
+	-ms-animation-name:popup_animate;
+	-webkit-animation-name:popup_animate;
+	-moz-animation-name:popup_animate;
+	animation-duration:0.5s;
+	-o-animation-duration:0.5s;
+	-ms-animation-duration:0.5s;
+	-webkit-animation-duration:0.5s;
+	-moz-animation-duration:0.5s;}
+@keyframes popup_animate{
+	0%{
+		opacity: 0;
+		transform: scale(0.8);}
+	80%{
+		opacity: 1;
+		transform: scale(1.03);}
+	99%{
+		transform: scale(0.99);}
+	100%{
+		transform: scale(1);}
+}
+@-o-keyframes popup_animate{
+	0%{
+		opacity: 0;
+		transform: scale(0.8);}
+	80%{
+		opacity: 1;
+		transform: scale(1.03);}
+	99%{
+		transform: scale(0.99);}
+	100%{
+		transform: scale(1);}
+}
+@-ms-keyframes popup_animate{
+	0%{
+		opacity: 0;
+		transform: scale(0.8);}
+	80%{
+		opacity: 1;
+		transform: scale(1.03);}
+	99%{
+		transform: scale(0.99);}
+	100%{
+		transform: scale(1);}
+}
+@-webkit-keyframes popup_animate{
+	0%{
+		opacity: 0;
+		transform: scale(0.8);}
+	80%{
+		opacity: 1;
+		transform: scale(1.03);}
+	99%{
+		transform: scale(0.99);}
+	100%{
+		transform: scale(1);}
+}
+@-moz-keyframes popup_animate{
+	0%{
+		opacity: 0;
+		transform: scale(0.8);}
+	80%{
+		opacity: 1;
+		transform: scale(1.03);}
+	99%{
+		transform: scale(0.99);}
+	100%{
+		transform: scale(1);}
+}
+.popupInner {
+	overflow: auto;
+	height: 100%;}
+.popupInner .ibm-data-table tr td, .popupInner .ibm-data-table tr th {	
+	padding: 10px;}
+.popupInner .ibm-data-table.ibm-altrows tbody tr:nth-child(2n) {
+    background-color: #f9f9f9;}
+.popupInner .ibm-data-table tbody tr + tr {
+	border:none;}
+.popupInner .ibm-data-table:not(.ibm-no-highlight) tbody tr:hover {
+    background-color: rgba(90, 170, 250, 0.2);}
+.popupBarOuter {
+	position: relative;
+	height: 60px;
+	margin: 0 0 60px;}
+.popupBarOuter .monthInner1, .popupBarOuter .monthInner2, .popupBarOuter .monthInner3 {
+	display: block;
+	border-bottom:1px solid #dddddd;
+	padding: 0 0 0 5px;
+	position: relative;}
+.popupBarOuter .percentageArea {
+	padding: 0 0 0 5px;
+	margin: 3px 0 2px;}
+.popupBarOuter .quarterListing > div {
+	height: 58px;
+	width: 33.33%;}
+.popupBarOuter .quarterListing > div:hover {
+	cursor: auto;}
+.popupBarOuter .quarterListing .month2 {
+	background-color: #f6f6f6;}
+.indicationStatus span {
+	display: inline-block;
+	padding: 0 0 0 15px;
+	position: relative;}
+.indicationStatus span:before {
+	content: "";
+	width: 6px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	top: 0;}
+.indicationStatus span.statusNotAvailable:before {
+	background-color: #979DA2;
+	border:1px solid #979DA2;}
+.indicationStatus span.statusStretch:before {
+	background-color: #22abfa;
+	border:1px solid #22abfa;}
+.indicationStatus span.statusOverAllocated:before {
+	background-color: #ff0000;
+	border:1px solid #ff0000;}
+.indicationStatus span.statusAvailable:before {
+	background-color: #ffffff;
+	border:1px solid #959595;}
+@media screen and (max-width: 1200px) {	
+	.allocation-container .ibm-data-table tbody {
+    	max-height:calc(100vh - 410px);}
+}
+@media screen and (max-width: 1024px) {
+	.allocation-container .ibm-data-table tbody {
+    	max-height:calc(100vh - 460px);
+    	min-height: 88px;}
+    .allocation-container .ibm-data-table tr td, .allocation-container .ibm-data-table tr th {	
+		width: 18vw;}
+	.allocation-container .ibm-data-table tr td:nth-child(3), .allocation-container .ibm-data-table tr th:nth-child(3) {
+		width: 30vw;}
+	.allocation-container .ibm-data-table tr td:nth-child(4), .allocation-container .ibm-data-table tr th:nth-child(4) {
+		width: auto;}
+}
+@media screen and (max-width: 1020px) {    
+	.allocation-container .ibm-data-table tr td, .allocation-container .ibm-data-table tr th {	
+		width: 23vw;}
+	.allocation-container .ibm-data-table tr td:nth-child(3), .allocation-container .ibm-data-table tr th:nth-child(3) {
+		width: 20vw;}
+	.allocation-container .ibm-data-table tr td:nth-child(4), .allocation-container .ibm-data-table tr th:nth-child(4) {
+		width: auto;}
+}
+@media screen and (max-width: 767px) {
+	.allocation-container .ibm-data-table tbody {	    
+		padding:0;
+		background-color: #f9f9f9;}
+	.allocation-container .ibm-data-table tbody tr, .allocation-container .ibm-data-table tbody tr + tr {
+		border-bottom: 1px solid #e0e0e0;}
+	.allocation-container .ibm-data-table:not(.ibm-no-highlight) tbody tr, .allocation-container .ibm-data-table:not(.ibm-no-highlight) tbody tr:nth-child(2n), .allocation-container .ibm-data-table:not(.ibm-no-highlight) tbody tr:hover {
+		background: #ffffff;}
+	.allocation-container .ibm-data-table thead {
+		display: none;}
+	.allocation-container .ibm-data-table tbody {
+    	max-height:100%;
+    	min-height: auto;}    
+	tbody .activeListing {
+		background-color: #fff;}
+    .allocation-container .ibm-data-table tbody tr {    	
+    	display: block;
+    	padding: 10px 20px 10px 120px;
+    	width: auto;}
+    .allocation-container .ibm-data-table tbody tr td {
+    	display: block;
+    	width: auto;
+    	padding: 2px 0px;
+    	font-size: 0.775rem;
+    	position: relative;}
+    .allocation-container .ibm-data-table tbody tr td:nth-child(3) {
+    	height: 55px;
+    	padding: 0;}
+    .allocation-container .ibm-data-table tbody tr td:before {
+    	position: absolute;
+    	left: -100px;
+    	top: 2px;
+    	font-weight: 700;
+    	font-size: 0.775rem;
+    	text-transform: uppercase;}
+    .allocation-container .ibm-data-table tbody tr td:nth-child(1):before {
+    	content: "Emp Name:";}
+    .allocation-container .ibm-data-table tbody tr td:nth-child(2):before {
+    	content: "Role:";}
+    .allocation-container .ibm-data-table tbody tr td:nth-child(3):before {
+    	content: "Availability:";
+    	top:-1px;}
+    .allocation-container .ibm-data-table tbody tr td:nth-child(4):before {
+    	content: "Manager:";}
+    .allocation-container .ibm-data-table .quarterListing > div, .allocation-container .ibm-data-table .selectedMonth > div {
+    	padding: 20px 0 0 0;
+    	position: relative;
+    	height: auto;}    
+    .monthInner1, .monthInner2, .monthInner3 {
+		border-bottom:1px solid #d9dbdd;
+		text-align: left;		
+		line-height: 23px;
+		font-size: 0.775rem;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		display: block;
+		font-weight: 500;
+		background-color: #ffffff;}	
+	.allocation-container .ibm-data-table .quarterListing > div:nth-child(2) {
+		background-color: #f9f9f9;}	
+	.allocation-container .ibm-data-table.ibm-altrows tbody tr:nth-child(2n) .quarterListing > div:nth-child(2):before {
+		background-color: #f9f9f9;}
+	.allocation-container .ibm-data-table .quarterHeading > div, .quarterListing > div {
+		width: 33.33%;}
+	.allocation-container .ibm-data-table .selectedMonthHeading > div, .selectedMonth > div {
+		width: 100%;}
+	.detailsPopup {		
+		left: 10vw;
+		top: 10vh;
+		right: 10vw;
+		bottom: 10vh;}
+}

@@ -1,0 +1,17 @@
+{
+  "name": "rat",
+  "description": "resource Availability report",
+  "main": "",
+  "authors": [
+    "Puspendu Mondal <pusmonda@in.ibm.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

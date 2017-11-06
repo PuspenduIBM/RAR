@@ -1,0 +1,9 @@
+<div class="ibm-sitenav-menu-list ibm-fleft">
+    <ul role="menubar" *ngIf="reports.managers.length > 0">
+        <li role="presentation" class="ibm-small ibm-highlight" (click)="showEmployees($event, managerlist) || $event.currentTarget.classList.add('ibm-highlight')"><a role="menuitem" href="javascript:void(0);">All</a></li>
+        <li role="presentation" class="ibm-small" *ngFor="let managerlist of reports.managers" [ngClass]="{'ibm-highlight': specificEmployees === managerlist}" (click)="showEmployees($event, managerlist)"><a role="menuitem" href="javascript:void(0);">{{managerlist.name}}</a></li>        
+    </ul>
+    <ul role="menubar" *ngIf="reports.managers.length <= 0">
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">Manager List Not Found</a></li>
+    </ul>
+</div>

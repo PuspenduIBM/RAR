@@ -1,0 +1,35 @@
+.ibm-sitenav-menu-list > ul > li:first-child a {
+	margin: 0;}
+.ibm-sitenav-menu-list > ul > li {
+	font-weight: 300;}
+.ibm-sitenav-menu-list > ul > li a {
+	outline: none;}
+@media screen and (max-width: 1250px) {
+	.ibm-sitenav-menu-list > ul > li > a {
+		margin-left: 15px;
+		font-size: 0.855rem;}
+}
+@media screen and (max-width: 1150px) {
+	.ibm-sitenav-menu-list > ul > li > a {
+		margin-left: 10px;
+		font-size: 0.745rem;}
+}
+@media screen and (max-width: 1024px) {
+	.ibm-sitenav-menu-list.ibm-fleft {
+		float: none !important;
+		text-align: center;
+		display: block;
+		overflow-y:hidden;
+		overflow-x:auto;
+		height: 70px;}
+	.ibm-sitenav-menu-list.ibm-fleft ul {
+		margin: 0 auto;
+		display: block;
+		white-space: nowrap;}
+	.ibm-sitenav-menu-list > ul > li {
+		float: none;
+		display: inline-block;}
+	.ibm-sitenav-menu-list > ul > li > button, .ibm-sitenav-menu-list > ul > li > span, .ibm-sitenav-menu-list > ul > li > a {
+		margin-left: 15px;
+		font-size: 0.875rem;}
+}

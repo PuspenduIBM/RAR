@@ -1,0 +1,25 @@
+<!-- <div class="ibm-sitenav-menu-list ibm-fleft">
+    <ul role="menubar">
+        <li role="presentation" class="ibm-small ibm-highlight"><a role="menuitem" href="#">All</a></li>
+        <li role="presentation"><a role="menuitem" href="#">Technical Content</a></li>
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">Northstar</a></li>
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">Design</a></li>
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">Content</a></li>
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">Video</a></li>
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">Web</a></li>
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">Social</a></li>
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">Application</a></li>
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">Optimization</a></li>
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">APIs</a></li>
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">ESS</a></li>
+    </ul>
+</div> -->
+<div class="ibm-sitenav-menu-list ibm-fleft">
+    <ul role="menubar" *ngIf="reports.offerings.length > 0">
+        <li role="presentation" class="ibm-small ibm-highlight" (click)="showEmployees($event, offeringlist) || $event.currentTarget.classList.add('ibm-highlight')"><a role="menuitem" href="#">All</a></li>
+        <li role="presentation" class="ibm-small" *ngFor="let offeringlist of reports.offerings" [ngClass]="{'ibm-highlight': specificEmployees === offeringlist}" (click)="showEmployees($event, offeringlist)"><a role="menuitem" href="javascript:void(0);">{{offeringlist.title}}</a></li>
+    </ul>
+    <ul role="menubar" *ngIf="reports.offerings.length <= 0">
+        <li role="presentation" class="ibm-small"><a role="menuitem" href="#">offering List Not Found</a></li>
+    </ul>
+</div>

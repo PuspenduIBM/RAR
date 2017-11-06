@@ -1,0 +1,6 @@
+@media screen and (max-width: 1024px) {
+	.ibm-sitenav-menu-container {
+		text-align: center;
+		padding: 0;
+		z-index: 1000;}
+}

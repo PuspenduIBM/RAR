@@ -1,0 +1,263 @@
+<app-tabs (selectedManager)="showEmployees($event)"></app-tabs>
+<app-filters (selectedMonth)="showEmployees($event)" (selectedQuarter)="showEmployeesFromQuarter($event)"></app-filters>
+<app-availability></app-availability>
+<div class="ibm-container-body">
+    <div class="allocation-container">
+        <!-- <ul *ngIf="reports.length > 0">
+            <li *ngFor="let report of reports">
+                <b><label>Name:</label></b> {{report.name}} &nbsp; &nbsp; | &nbsp; &nbsp; <b><label>Address(street):</label></b><span> {{report.address.street}}</span>
+            </li>        
+        </ul>
+        <ul *ngIf="reports.length <= 0">
+            <li>No record Found</li>
+        </ul> -->
+        <!-- <ul *ngIf="reports.employees.length > 0">aa
+            <li *ngFor="let report of reports.employees">
+                <b><label>Name:</label></b> {{report.name}} &nbsp; &nbsp; | &nbsp; &nbsp; <b><label>Address(street):</label></b><span> {{report.address.street}}</span>
+            </li>        
+        </ul>
+        <ul *ngIf="reports.employees.length <= 0">
+            <li>No record Found</li>
+        </ul> -->
+        <!-- <div>Availability - 
+            <span *ngFor="let user of specificEmployees">Name -
+              {{user.name}}
+            </span>
+        </div> -->
+        <ng-container *ngIf="specific_quarter"><div *ngFor="let monthlist of reports.months">ivyu<h4 *ngIf="monthlist.quartername != specific_quarter">{{monthlist.name}}</h4></div></ng-container>
+        <table id="data-record" class="ibm-data-table ibm-altrows ibm-background-white-core ibm-small" width="100%">
+            <thead [ngClass]="statusTheadTbody">
+                <tr>
+                    <th scope="col" class="ibm-bold">Emp Name</th>
+                    <th scope="col" class="ibm-bold">Role</th>
+                    <th scope="col" class="ibm-bold">Availablity
+                        <ng-template #mainQuarter *ngIf="(!specifiedMonth) then thatQuarterHeading else mainMonth"></ng-template>
+                        <ng-template #thatQuarterHeading *ngIf="(specifiedQuarter == 'Quarter 1') then thatQuarter1 else nextQuarter2"></ng-template>
+                        <ng-template #nextQuarter2 *ngIf="(specifiedQuarter == 'Quarter 2') then thatQuarter2 else nextQuarter3"></ng-template>
+                        <ng-template #nextQuarter3 *ngIf="(specifiedQuarter == 'Quarter 3') then thatQuarter3 else nextQuarter4"></ng-template>
+                        <ng-template #nextQuarter4 *ngIf="(specifiedQuarter == 'Quarter 4') then thatQuarter4 else defaultQuarter"></ng-template>
+                        <ng-template #defaultQuarter *ngIf="((specifiedQuarter == 'defaultQuarterVal') || (specifiedQuarter != 'Quarter 1') && (specifiedQuarter != 'Quarter 2') && (specifiedQuarter != 'Quarter 3') && (specifiedQuarter != 'Quarter 4')) then presentQuarter else thatQuarterHeading"></ng-template>
+                        <ng-template #thatQuarter1>
+                            <div class="quarterHeading">
+                                <div class="month1" [ngClass]="statusQuarterHeading1" (mouseover)="onMouseOver1()" (mouseout)="onMouseOut1()">Jan</div>
+                                <div class="month2" [ngClass]="statusQuarterHeading2" (mouseover)="onMouseOver2()" (mouseout)="onMouseOut2()">Feb</div>
+                                <div class="month3" [ngClass]="statusQuarterHeading3" (mouseover)="onMouseOver3()" (mouseout)="onMouseOut3()">Mar</div>
+                            </div>
+                        </ng-template>
+                        <ng-template #thatQuarter2>
+                            <div class="quarterHeading">
+                                <div class="month1" [ngClass]="statusQuarterHeading1" (mouseover)="onMouseOver1()" (mouseout)="onMouseOut1()">Apr</div>
+                                <div class="month2" [ngClass]="statusQuarterHeading2" (mouseover)="onMouseOver2()" (mouseout)="onMouseOut2()">May</div>
+                                <div class="month3" [ngClass]="statusQuarterHeading3" (mouseover)="onMouseOver3()" (mouseout)="onMouseOut3()">Jun</div>
+                            </div>
+                        </ng-template>
+                        <ng-template #thatQuarter3>
+                            <div class="quarterHeading">
+                                <div class="month1" [ngClass]="statusQuarterHeading1" (mouseover)="onMouseOver1()" (mouseout)="onMouseOut1()">Jul</div>
+                                <div class="month2" [ngClass]="statusQuarterHeading2" (mouseover)="onMouseOver2()" (mouseout)="onMouseOut2()">Aug</div>
+                                <div class="month3" [ngClass]="statusQuarterHeading3" (mouseover)="onMouseOver3()" (mouseout)="onMouseOut3()">Sep</div>
+                            </div>
+                        </ng-template>
+                        <ng-template #thatQuarter4>
+                            <div class="quarterHeading">
+                                <div class="month1" [ngClass]="statusQuarterHeading1" (mouseover)="onMouseOver1()" (mouseout)="onMouseOut1()">Oct</div>
+                                <div class="month2" [ngClass]="statusQuarterHeading2" (mouseover)="onMouseOver2()" (mouseout)="onMouseOut2()">Nov</div>
+                                <div class="month3" [ngClass]="statusQuarterHeading3" (mouseover)="onMouseOver3()" (mouseout)="onMouseOut3()">Dec</div>
+                            </div>
+                        </ng-template>
+                        <ng-template #presentQuarter>
+                            <div class="quarterHeading">
+                                <div class="month1" [ngClass]="statusQuarterHeading1" (mouseover)="onMouseOver1()" (mouseout)="onMouseOut1()">Month1</div>
+                                <div class="month2" [ngClass]="statusQuarterHeading2" (mouseover)="onMouseOver2()" (mouseout)="onMouseOut2()">Month2</div>
+                                <div class="month3" [ngClass]="statusQuarterHeading3" (mouseover)="onMouseOver3()" (mouseout)="onMouseOut3()">Month3</div>
+                            </div>
+                        </ng-template>
+                        <!-- <ng-container *ngIf="specifiedMonth == 'all'; then thatMonthHeading else thatQuarterHeading"></ng-container> -->
+                        <ng-container #mainMonth *ngIf="(specifiedQuarter && (specifiedMonth == 'all')); then thatQuarterHeading else thatMonthHeading"></ng-container>
+                        <!-- <ng-container *ngIf="specifiedQuarter; then thatQuarterHeading else thatMonthHeading"></ng-container> -->
+                        <ng-template #thatMonthHeading>
+                            <div class="selectedMonthHeading">
+                                <div class="month1" [ngClass]="statusQuarterHeading1" (mouseover)="onMouseOver1()" (mouseout)="onMouseOut1()">{{specifiedMonth}}</div>
+                            </div>
+                        </ng-template>
+                        
+                    </th>
+                    <th scope="col" class="ibm-bold">Manager</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="reports.employees.length > 0; then allReports else noReport">
+            </tbody>
+            <ng-template #allReports>
+                <tbody>
+                    <tr *ngFor="let report of reports.employees">
+                        <td>{{report.name}}</td>                    
+                        <td>{{report.role}}</td>
+                        <td>
+                            <!-- <ng-container *ngIf="timeWiseData(); then thatMonth else thatQuarter"></ng-container> -->
+                            <ng-container *ngIf="(specifiedMonth && (specifiedMonth != 'all')); then thatMonth else thatQuarter"></ng-container>
+                            <!-- <ng-container *ngIf="specifiedQuarter; then thatQuarter else thatMonth"></ng-container> -->
+                            <ng-template #thatMonth>
+                                <div id="report_{{report.id}}" class="selectedMonth" (click)="showOverlay(report)">
+                                    <div class="month1" [ngClass]="statusQuarterListing1" (mouseover)="onMouseOver1()" (mouseout)="onMouseOut1()">
+                                        <div class="monthInner1">{{specifiedMonth}}</div>
+                                        <div class="percentageArea">66%</div>
+                                        <div class="barOuter">
+                                            <div class="availabilityBar availableBar" title="Available - ( )" [style.width]="66 + '%'"></div>
+                                            <div class="availabilityBar stretchBar" title="Stretch - ({{report.project.startDate}}-{{report.project.endDate}})" [style.width]="34 + '%'"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                            <ng-template #thatQuarter>
+                                <div id="report_{{report.id}}" class="quarterListing" (click)="showOverlay(report)">
+                                    <div class="month1" [ngClass]="statusQuarterListing1" (mouseover)="onMouseOver1()" (mouseout)="onMouseOut1()">
+                                        <div class="monthInner1">Jan</div>
+                                        <div class="percentageArea">66%</div>
+                                        <div class="barOuter">
+                                            <div class="availabilityBar availableBar" title="Available - ( )" [style.width]="66 + '%'"></div>
+                                            <div class="availabilityBar stretchBar" title="Stretch - ({{report.project.startDate}}-{{report.project.endDate}})" [style.width]="34 + '%'"></div>                                    
+                                        </div>
+                                    </div>
+                                    <div class="month2" [ngClass]="statusQuarterListing2" (mouseover)="onMouseOver2()" (mouseout)="onMouseOut2()">
+                                        <div class="monthInner2">Feb</div>
+                                        <div class="percentageArea">20%</div>
+                                        <div class="barOuter">
+                                            <div class="availabilityBar stretchBar" title="Stretch - ({{report.project.startDate}}-{{report.project.endDate}})" [style.width]="34 + '%'"></div>
+                                            <div class="availabilityBar overAllocatedBar" title="Over Allocated - ( )" [style.width]="30 + '%'"></div>
+                                            <div class="availabilityBar notAvailableBar" title="Not Available - ( )" [style.width]="16 + '%'"></div>
+                                            <div class="availabilityBar availableBar" title="Available - ( )" [style.width]="20 + '%'"></div>
+                                        </div>
+                                    </div>
+                                    <div class="month3" [ngClass]="statusQuarterListing3" (mouseover)="onMouseOver3()" (mouseout)="onMouseOut3()">
+                                        <div class="monthInner3">Mar</div>
+                                        <div class="percentageArea">40%</div>
+                                        <div class="barOuter">
+                                            <div class="availabilityBar notAvailableBar" title="Not Available - ( )" [style.width]="10 + '%'"></div>
+                                            <div class="availabilityBar stretchBar" title="Stretch - ({{report.project.startDate}}-{{report.project.endDate}})" [style.width]="30 + '%'"></div>
+                                            <div class="availabilityBar overAllocatedBar" title="Over Allocated - ( )" [style.width]="20 + '%'"></div>
+                                            <div class="availabilityBar availableBar" title="Available - ( )" [style.width]="40 + '%'"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </td>
+                        <td>{{report.managerName}}</td>
+                    </tr>
+                </tbody>
+            </ng-template>            
+            <ng-template #noReport>
+                <tbody>
+                    <tr>
+                        <td>No record Found</td>
+                    </tr>
+                </tbody>
+            </ng-template>
+            <!-- <tbody *ngIf="reports.employees.length <= 0">
+                <tr>
+                    <td>No record Found</td>
+                </tr>
+            </tbody> -->
+        </table>        
+    </div>
+    <div id="popup" class="detailsPopup" [ngClass]="statusPopup">
+        <div class="closePopup ibm-close" (click)="hideOverlay()"></div>
+        <div class="popupInner" *ngIf="specificReport">
+            <h4 class="ibm-h4">Availability - {{specificReport.name}} ({{specificReport.email}})</h4>
+            <div class="ibm-rule ibm-alternate ibm-gray-30"><hr></div>
+            <div class="popupBarOuter">
+                <ng-container *ngIf="specifiedMonth; then thatMonthPopup else thatQuarterPopup"></ng-container>
+                <ng-template #thatQuarterPopup>              
+                    <div id="report_{{specificReport.id}}" class="quarterListing">
+                        <div class="month1">
+                            <div class="monthInner1 ibm-small">Jan</div>
+                            <div class="percentageArea">66%</div>
+                            <div class="barOuter">
+                                <div class="availabilityBar availableBar" title="Available - ( )" [style.width]="66 + '%'"></div>
+                                <div class="availabilityBar stretchBar" title="Stretch - ({{specificReport.project.startDate}}-{{specificReport.project.endDate}})" [style.width]="34 + '%'"></div>
+                            </div>
+                        </div>
+                        <div class="month2">
+                            <div class="monthInner2 ibm-small">Feb</div>
+                            <div class="percentageArea">20%</div>
+                            <div class="barOuter">
+                                <div class="availabilityBar stretchBar" title="Stretch - ({{specificReport.project.startDate}}-{{specificReport.project.endDate}})" [style.width]="34 + '%'"></div>
+                                <div class="availabilityBar overAllocatedBar" title="Over Allocated - ( )" [style.width]="30 + '%'"></div>
+                                <div class="availabilityBar notAvailableBar" title="Not Available - ( )" [style.width]="16 + '%'"></div>
+                                <div class="availabilityBar availableBar" title="Available - ( )" [style.width]="20 + '%'"></div>
+                            </div>
+                        </div>
+                        <div class="month3">
+                            <div class="monthInner3 ibm-small">Mar</div>
+                            <div class="percentageArea">40%</div>
+                            <div class="barOuter">
+                                <div class="availabilityBar notAvailableBar" title="Not Available - ( )" [style.width]="10 + '%'"></div>
+                                <div class="availabilityBar stretchBar" title="Stretch - ({{specificReport.project.startDate}}-{{specificReport.project.endDate}})" [style.width]="30 + '%'"></div>
+                                <div class="availabilityBar overAllocatedBar" title="Over Allocated - ( )" [style.width]="20 + '%'"></div>
+                                <div class="availabilityBar availableBar" title="Available - ( )" [style.width]="40 + '%'"></div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template #thatMonthPopup>
+                    <div id="report_{{specificReport.id}}" class="specifiedMonth">
+                        <div class="month1">
+                            <div class="monthInner1 ibm-small">{{specifiedMonth}}</div>
+                            <div class="percentageArea">66%</div>
+                            <div class="barOuter">
+                                <div class="availabilityBar availableBar" title="Available - ( )" [style.width]="66 + '%'"></div>
+                                <div class="availabilityBar stretchBar" title="Stretch - ({{specificReport.project.startDate}}-{{specificReport.project.endDate}})" [style.width]="34 + '%'"></div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </div>
+            <table id="data-details" class="ibm-data-table ibm-altrows ibm-small" width="100%"> 
+                <thead> 
+                    <tr>
+                        <th>Status</th> 
+                        <th>Start Date</th> 
+                        <th>End Date</th> 
+                        <th>Available</th> 
+                        <th>Allocation</th>
+                        <th>Project Name</th>
+                    </tr>
+                </thead> 
+                <tbody> 
+                    <tr>
+                        <td class="indicationStatus"><span class="statusNotAvailable">Not Funded | Not Available</span></td>                        
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td class="indicationStatus"><span class="statusStretch">Stretch</span></td>                        
+                        <td>{{specificReport.project.startDate}}</td>
+                        <td>{{specificReport.project.endDate}}</td>
+                        <td>{{specificReport.project.available}}</td>
+                        <td>{{specificReport.project.allocation}}</td>
+                        <td>{{specificReport.project.name}}</td>
+                    </tr>
+                    <tr>
+                        <td class="indicationStatus"><span class="statusOverAllocated">Over Allocated</span></td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td class="indicationStatus"><span class="statusAvailable">Available</span></td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="popupBack" class="popupBack" [ngClass]="statusPopupBack" (click)="hideOverlay()"></div>
+</div>

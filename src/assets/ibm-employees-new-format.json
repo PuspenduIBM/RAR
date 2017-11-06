@@ -1,0 +1,39 @@
+{
+    "Offerings": {
+        "Technical Content": {
+            "Technical Editor": {}
+        },
+        "APIs": {
+            "Java \/ J2EE Application Developer": {
+                "rajaneesh@in.ibm.com": {
+                    "EMT_NAME": "Application Developer",
+                    "MANAGER_EMAIL": "gurjoshi@in.ibm.com",
+                    "ALLOCATION_DETAIL": {
+                        "11/05/2017-12/05/2017": {
+                            "status": "P",
+                            "EMT_NAME": "DSG GATEWAY"
+                        }
+                    }
+                },
+                "karthickrao@in.ibm.com": {
+                    "EMT_NAME": "Java Developer",
+                    "MANAGER_EMAIL": "gurjoshi@in.ibm.com",
+                    "ALLOCATION_DETAIL": {
+                        "11/05/2017-12/05/2017": {
+                            "status": "S",
+                            "EMT_NAME": "BLUEMINE"
+                        }
+                    }
+                }
+            },
+            "Technical Lead": {}
+        },
+        "Video": {
+            "Video Editor": {}
+        }
+    },
+    "managers": [{
+        "email": "gurjoshi@in.ibm.com",
+        "name": "Joshi, Guruprasad K"
+    }]
+}
